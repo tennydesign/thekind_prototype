@@ -12,7 +12,8 @@ import SpriteKit
 
 class BoardScene: SKScene {
 
- 
+    var lastCamScale: CGFloat = 0.18
+    
     override func didMove(to view: SKView) {
         
         if let camera = scene?.childNode(withName: "camera") as? SKCameraNode {
@@ -22,16 +23,17 @@ class BoardScene: SKScene {
         
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanFrom(withSender:)))
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapFrom(withSender:)))
-       // let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(handlePinchFrom(withSender:)))
+        let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(handlePinchFrom(withSender:)))
         
         self.view?.addGestureRecognizer(panGestureRecognizer)
         self.view?.addGestureRecognizer(tapGestureRecognizer)
- 
+        self.view?.addGestureRecognizer(pinchGestureRecognizer)
         
         
         
     }
     
+    // SLIDES BUT DOESNT TAP
     @objc func handlePanFrom(withSender sender: UIPanGestureRecognizer) {
         var targetPosition: CGPoint!
         
@@ -58,7 +60,7 @@ class BoardScene: SKScene {
         
     }
     
-    //HERE
+    //TAP WHEN NOT SLIDING
     @objc func handleTapFrom(withSender tap: UITapGestureRecognizer) {
         if tap.state != .ended {
             return
@@ -87,19 +89,14 @@ class BoardScene: SKScene {
         
     }
     
-    
-    @objc func handlePinchFrom(withSender sender: UIPinchGestureRecognizer) {
+    // ZOOMING IN AND OUT
+    @objc func handlePinchFrom(withSender pinch: UIPinchGestureRecognizer) {
+
         
-        
-//        if let tilemap = scene?.childNode(withName: "tileMapNode") as? SKTileMapNode {
-//            let senderLocation = sender.location(in: sender.view)
-//            let location = self.convertPoint(fromView: senderLocation)
-//            let col = tilemap.tileColumnIndex(fromPosition: location)
-//            let row = tilemap.tileRowIndex(fromPosition: location)
-//            //            let tile = tilemap.tileDefinition(atColumn: col, row: row)
-//
-//            print("\(row) - \(col)")
-//        }
+        if pinch.state == .began {
+            lastCamScale = (camera?.xScale)!
+        }
+        camera?.setScale(lastCamScale * 1 / pinch.scale)
         
     }
     
