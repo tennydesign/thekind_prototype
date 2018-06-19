@@ -92,11 +92,31 @@ class BoardScene: SKScene {
     // ZOOMING IN AND OUT
     @objc func handlePinchFrom(withSender pinch: UIPinchGestureRecognizer) {
 
-        
+        print(camera?.yScale)
         if pinch.state == .began {
             lastCamScale = (camera?.xScale)!
         }
+        
+        //centering zoom:
+        let pinchLocation = pinch.location(in: pinch.view)
+        let scenepoint = self.convertPoint(fromView: pinchLocation)
+
+        
         camera?.setScale(lastCamScale * 1 / pinch.scale)
+        
+        // Limiting zoom
+        let zoomOutLimit:CGFloat = 1.27
+        let zoomLimit:CGFloat = 0.18
+        if (camera?.xScale)! < zoomLimit {
+            camera?.xScale = zoomLimit
+            camera?.yScale = zoomLimit
+        }
+        
+        if (camera?.xScale)! > zoomOutLimit {
+            camera?.xScale = zoomOutLimit
+            camera?.yScale = zoomOutLimit
+        }
+        
         
     }
     
