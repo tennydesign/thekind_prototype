@@ -19,10 +19,7 @@
 		A0D4F84B20CF3BD2001AFFF8 /* TilesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D4F84A20CF3BD2001AFFF8 /* TilesUITests.swift */; };
 		A0D4F85920CF3E33001AFFF8 /* BoardScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0D4F85820CF3E33001AFFF8 /* BoardScene.sks */; };
 		A0D4F86120CF49A3001AFFF8 /* MyTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0D4F86020CF49A3001AFFF8 /* MyTileSet.sks */; };
-		A0DA6A7A20D73ECB00B40BAD /* Ladrilhos.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0DA6A7920D73ECB00B40BAD /* Ladrilhos.sks */; };
-		A0F2839720DAD01D00AF4394 /* TestScrollScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0F2839620DAD01D00AF4394 /* TestScrollScene.sks */; };
-		A0F2839920DAD04300AF4394 /* TestScrollScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F2839820DAD04300AF4394 /* TestScrollScene.swift */; };
-		A0F2839B20DAF80400AF4394 /* ScrollViewTileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F2839A20DAF80400AF4394 /* ScrollViewTileController.swift */; };
+		A0DA6A7A20D73ECB00B40BAD /* Kinds.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0DA6A7920D73ECB00B40BAD /* Kinds.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,10 +58,7 @@
 		A0D4F84C20CF3BD2001AFFF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0D4F85820CF3E33001AFFF8 /* BoardScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BoardScene.sks; sourceTree = "<group>"; };
 		A0D4F86020CF49A3001AFFF8 /* MyTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyTileSet.sks; sourceTree = "<group>"; };
-		A0DA6A7920D73ECB00B40BAD /* Ladrilhos.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Ladrilhos.sks; sourceTree = "<group>"; };
-		A0F2839620DAD01D00AF4394 /* TestScrollScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TestScrollScene.sks; sourceTree = "<group>"; };
-		A0F2839820DAD04300AF4394 /* TestScrollScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScrollScene.swift; sourceTree = "<group>"; };
-		A0F2839A20DAF80400AF4394 /* ScrollViewTileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewTileController.swift; sourceTree = "<group>"; };
+		A0DA6A7920D73ECB00B40BAD /* Kinds.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Kinds.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,12 +112,9 @@
 				A0D4F82720CF3BD1001AFFF8 /* AppDelegate.swift */,
 				A0D4F82920CF3BD1001AFFF8 /* spriteKitTIleController.swift */,
 				A0D4F82B20CF3BD1001AFFF8 /* Main.storyboard */,
-				A0F2839A20DAF80400AF4394 /* ScrollViewTileController.swift */,
 				A00024C020D2022D00A43FFB /* BoardScene.swift */,
 				A0D4F85820CF3E33001AFFF8 /* BoardScene.sks */,
-				A0F2839620DAD01D00AF4394 /* TestScrollScene.sks */,
-				A0F2839820DAD04300AF4394 /* TestScrollScene.swift */,
-				A0DA6A7920D73ECB00B40BAD /* Ladrilhos.sks */,
+				A0DA6A7920D73ECB00B40BAD /* Kinds.sks */,
 				A0D4F86020CF49A3001AFFF8 /* MyTileSet.sks */,
 				A00024BC20D1F56800A43FFB /* GridTileSet.sks */,
 				A0D4F83120CF3BD2001AFFF8 /* Assets.xcassets */,
@@ -262,8 +253,7 @@
 				A0D4F86120CF49A3001AFFF8 /* MyTileSet.sks in Resources */,
 				A00024BD20D1F56800A43FFB /* GridTileSet.sks in Resources */,
 				A0D4F85920CF3E33001AFFF8 /* BoardScene.sks in Resources */,
-				A0DA6A7A20D73ECB00B40BAD /* Ladrilhos.sks in Resources */,
-				A0F2839720DAD01D00AF4394 /* TestScrollScene.sks in Resources */,
+				A0DA6A7A20D73ECB00B40BAD /* Kinds.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,10 +279,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0D4F82A20CF3BD1001AFFF8 /* spriteKitTIleController.swift in Sources */,
-				A0F2839B20DAF80400AF4394 /* ScrollViewTileController.swift in Sources */,
 				A00024C120D2022D00A43FFB /* BoardScene.swift in Sources */,
 				A0D4F82820CF3BD1001AFFF8 /* AppDelegate.swift in Sources */,
-				A0F2839920DAD04300AF4394 /* TestScrollScene.swift in Sources */,
 				A0D4F83020CF3BD1001AFFF8 /* Tiles.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

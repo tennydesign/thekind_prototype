@@ -35,6 +35,16 @@ class BoardScene: SKScene {
         
     }
     
+    func keepWithinPanLimit(for coordinate: inout CGFloat) -> CGFloat
+    {
+        
+            if coordinate < -850 || coordinate > 850{
+                coordinate = coordinate < 0 ? -850 : 850
+            }
+        return coordinate
+    }
+
+    
     // This allows the user to PAN without detecting TAP at the same time.
     @objc func handlePanFrom(withSender sender: UIPanGestureRecognizer) {
     
@@ -48,15 +58,24 @@ class BoardScene: SKScene {
             // This formula is to make sure the speed of the pan stays the same even if zoomed out //20+20*(1,27-0,18)
             let zoomedSpeedFactor:CGFloat = 10
             let zoomedOutSpeedFactor:CGFloat = 20
-            let changeX = (camera?.position.x)! - (translation.x * (zoomedSpeedFactor + zoomedOutSpeedFactor * ((camera?.xScale)! - initCamScale)))
-            let changeY = (camera?.position.y)! + (translation.y * (zoomedSpeedFactor + zoomedOutSpeedFactor * ((camera?.xScale)! - initCamScale)))
+            var changeX = (camera?.position.x)! - (translation.x * (zoomedSpeedFactor + zoomedOutSpeedFactor * ((camera?.xScale)! - initCamScale)))
+            var changeY = (camera?.position.y)! + (translation.y * (zoomedSpeedFactor + zoomedOutSpeedFactor * ((camera?.xScale)! - initCamScale)))
+
+            
+            print("x:\(changeX) :: y:\(changeY)")
+            
+            print("coordinate X to go to: \(keepWithinPanLimit(for:&changeX))")
+            print("coordinate Y to go to: \(keepWithinPanLimit(for:&changeY))")
+            
             targetPosition = CGPoint(x: changeX, y: changeY)
+            
             
             //move to position.
             let action: SKAction = SKAction.move(to: targetPosition, duration: 1)
             
             //action.timingMode = .easeOut
             action.timingFunction = CubicEaseOut
+            
             
             self.camera?.run(action)
             
