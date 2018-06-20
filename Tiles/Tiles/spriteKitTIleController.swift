@@ -19,14 +19,11 @@ class ViewController: UIViewController {
         if let scene = SKScene(fileNamed: "BoardScene") as? BoardScene {
             scene.scaleMode = .aspectFill
             boardSkView.presentScene(scene)
-      
         } else {
             print("scene not found")
         }
         boardSkView.ignoresSiblingOrder = true
-        
     }
-    
     
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +31,4 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-

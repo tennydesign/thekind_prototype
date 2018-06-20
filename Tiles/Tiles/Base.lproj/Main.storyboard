@@ -39,7 +39,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-529" y="74"/>
+        </scene>
+        <!--Scroll View Controller-->
+        <scene sceneID="vZJ-S1-0Zn">
+            <objects>
+                <viewController id="ktZ-mF-GWH" customClass="ScrollViewController" customModule="Tiles" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IVb-00-Kln">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xg2-Vd-NAI" userLabel="boardGameWindow">
+                                <rect key="frame" x="10" y="76" width="355" height="408"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Qe-aQ-9mQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="408"/>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5Qe-aQ-9mQ" secondAttribute="trailing" id="7Pc-Mx-LeX"/>
+                                    <constraint firstItem="5Qe-aQ-9mQ" firstAttribute="leading" secondItem="xg2-Vd-NAI" secondAttribute="leading" id="HqA-jN-UvS"/>
+                                    <constraint firstItem="5Qe-aQ-9mQ" firstAttribute="top" secondItem="xg2-Vd-NAI" secondAttribute="top" id="Osf-fT-VfL"/>
+                                    <constraint firstAttribute="bottom" secondItem="5Qe-aQ-9mQ" secondAttribute="bottom" id="QDZ-nu-6Dt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4lw-cs-w9k" firstAttribute="bottom" secondItem="xg2-Vd-NAI" secondAttribute="bottom" constant="183" id="Bgt-nW-zDh"/>
+                            <constraint firstItem="xg2-Vd-NAI" firstAttribute="leading" secondItem="4lw-cs-w9k" secondAttribute="leading" constant="10" id="atK-Cn-Gag"/>
+                            <constraint firstItem="4lw-cs-w9k" firstAttribute="trailing" secondItem="xg2-Vd-NAI" secondAttribute="trailing" constant="10" id="mCg-sF-spJ"/>
+                            <constraint firstItem="xg2-Vd-NAI" firstAttribute="top" secondItem="4lw-cs-w9k" secondAttribute="top" constant="56" id="x8b-Ht-T9j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4lw-cs-w9k"/>
+                    </view>
+                    <connections>
+                        <outlet property="boardGameWindow" destination="xg2-Vd-NAI" id="NRt-wX-DrW"/>
+                        <outlet property="scrollView" destination="5Qe-aQ-9mQ" id="iwR-rV-X9D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y6P-it-278" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800.79999999999995" y="129.98500749625188"/>
         </scene>
     </scenes>
 </document>
