@@ -12,8 +12,9 @@ import SpriteKit
 
 class BoardScene: SKScene {
 
-    var lastCamScale: CGFloat = 0.18
-    let initCamScale: CGFloat = 0.18
+    var lastCamScale: CGFloat = 0.34
+    let initCamScale: CGFloat = 0.34
+    let maxZoomLimit: CGFloat = 0.60
     
     override func didMove(to view: SKView) {
         
@@ -31,61 +32,12 @@ class BoardScene: SKScene {
         self.view?.addGestureRecognizer(tapGestureRecognizer)
         self.view?.addGestureRecognizer(pinchGestureRecognizer)
         
-        
-        
     }
     
-    func keepWithinPanLimit(for coordinate: inout CGFloat) -> CGFloat
-    {
-        
-            if coordinate < -850 || coordinate > 850{
-                coordinate = coordinate < 0 ? -850 : 850
-            }
-        return coordinate
-    }
+
 
     
-    // This allows the user to PAN without detecting TAP at the same time.
-    @objc func handlePanFrom(withSender sender: UIPanGestureRecognizer) {
-    
-        var targetPosition: CGPoint!
-        
-        if sender.state == .began || sender.state == .changed {
-            let translation = sender.translation(in: sender.view)
 
-            // Current position + translation with a modifier (multiplier) otherwise moves too slow. The modified changes depending on the zoom level of the cam.
-            // let changeX = (camera?.position.x)! - translation.x*20 -> the "20" was the modified in the prototype. Now is this monster below.
-            // This formula is to make sure the speed of the pan stays the same even if zoomed out //20+20*(1,27-0,18)
-            let zoomedSpeedFactor:CGFloat = 10
-            let zoomedOutSpeedFactor:CGFloat = 20
-            var changeX = (camera?.position.x)! - (translation.x * (zoomedSpeedFactor + zoomedOutSpeedFactor * ((camera?.xScale)! - initCamScale)))
-            var changeY = (camera?.position.y)! + (translation.y * (zoomedSpeedFactor + zoomedOutSpeedFactor * ((camera?.xScale)! - initCamScale)))
-
-            
-            print("x:\(changeX) :: y:\(changeY)")
-            
-            print("coordinate X to go to: \(keepWithinPanLimit(for:&changeX))")
-            print("coordinate Y to go to: \(keepWithinPanLimit(for:&changeY))")
-            
-            targetPosition = CGPoint(x: changeX, y: changeY)
-            
-            
-            //move to position.
-            let action: SKAction = SKAction.move(to: targetPosition, duration: 1)
-            
-            //action.timingMode = .easeOut
-            action.timingFunction = CubicEaseOut
-            
-            
-            self.camera?.run(action)
-            
-            //this clears up the gesture buffer? maybe. It doesn't work well without it.
-            sender.setTranslation(CGPoint.zero, in: sender.view)
-        
-    
-        }
-        
-    }
     
     //This alows the user to tap the tile.
     @objc func handleTapFrom(withSender tap: UITapGestureRecognizer) {
@@ -110,51 +62,16 @@ class BoardScene: SKScene {
                 // manipulate tile here.
                 tilemap.setTileGroup(nil, forColumn: col, row: row)
             }
-            
+        }
+    }
+    
 
-        }
-        
-    }
     
-    // Zooming camera
-    @objc func handlePinchFrom(withSender pinch: UIPinchGestureRecognizer) {
+    
 
-        if pinch.state == .began {
-            //initialize it with the last camera scale state
-            lastCamScale = (camera?.xScale)!
-        }
-        
-        // sets the new scale.
-        camera?.setScale(lastCamScale * 1 / pinch.scale)
-        
-        
-        // Limits zoom
-        
-        let zoomOutLimit:CGFloat = 1.0
-        let zoomLimit:CGFloat = 0.18
-        
-        if (camera?.xScale)! < zoomLimit {
-            camera?.xScale = zoomLimit
-            camera?.yScale = zoomLimit
-        }
-        
-        if (camera?.xScale)! > zoomOutLimit {
-            camera?.xScale = zoomOutLimit
-            camera?.yScale = zoomOutLimit
-        }
-        
-        
-    }
-    
-    
-    // EaseOut function added to action.timingFunction = CubicEaseOut in the Pan gesture handler
-    func CubicEaseOut(_ t:Float)->Float
-    {
-        let f:Float = (t - 1);
-        return f * f * f + 1;
-    }
     
     override func update(_ currentTime: TimeInterval) {
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

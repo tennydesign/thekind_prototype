@@ -19,17 +19,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oFn-bM-p9f">
-                                <rect key="frame" x="0.0" y="70" width="375" height="447"/>
+                                <rect key="frame" x="0.0" y="85" width="375" height="418"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="447" id="OT9-m4-Wx7"/>
+                                    <constraint firstAttribute="height" constant="418" id="OT9-m4-Wx7"/>
                                 </constraints>
                             </skView>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="basetransparent" translatesAutoresizingMaskIntoConstraints="NO" id="Lnc-73-qjn">
+                                <rect key="frame" x="0.0" y="302" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="TjN-io-z8J"/>
+                                    <constraint firstAttribute="width" constant="375" id="qIY-iU-aHT"/>
+                                </constraints>
+                            </imageView>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toptransparent" translatesAutoresizingMaskIntoConstraints="NO" id="3Le-Y4-l9Q">
+                                <rect key="frame" x="0.0" y="60" width="375" height="167"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="167" id="HCI-3j-4Z7"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oFn-bM-p9f" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Doe-Wf-DUh"/>
+                            <constraint firstItem="3Le-Y4-l9Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dvj-L9-2oR"/>
                             <constraint firstItem="oFn-bM-p9f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FhQ-3U-31c"/>
-                            <constraint firstItem="oFn-bM-p9f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="ldp-F0-hUY"/>
+                            <constraint firstItem="3Le-Y4-l9Q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ado-6F-kXC"/>
+                            <constraint firstItem="3Le-Y4-l9Q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="60" id="dE1-qI-Eu7"/>
+                            <constraint firstItem="oFn-bM-p9f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="ldp-F0-hUY"/>
+                            <constraint firstItem="Lnc-73-qjn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ndM-c6-DPb"/>
+                            <constraint firstItem="Lnc-73-qjn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qIW-pX-prV"/>
+                            <constraint firstItem="Lnc-73-qjn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-165" id="vUJ-1j-N35"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -39,7 +58,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-529" y="74"/>
+            <point key="canvasLocation" x="-530.39999999999998" y="73.313343328335833"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="basetransparent" width="485" height="169"/>
+        <image name="toptransparent" width="485" height="169"/>
+    </resources>
 </document>
