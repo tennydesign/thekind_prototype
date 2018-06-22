@@ -15,10 +15,10 @@ class BoardScene: SKScene {
     var lastCamScale: CGFloat = 0.34
     let initCamScale: CGFloat = 0.34
     let maxZoomLimit: CGFloat = 0.60
-    
+
     override func didMove(to view: SKView) {
         
-        if let camera = scene?.childNode(withName: "camera") as? SKCameraNode {
+        if let camera = scene?.childNode(withName: kindBoardMechanics.sharedInstance.cameraName) as? SKCameraNode {
            // camera.position = (player?.position)!
             camera.setScale(initCamScale)
             self.camera = camera
@@ -32,6 +32,8 @@ class BoardScene: SKScene {
         self.view?.addGestureRecognizer(tapGestureRecognizer)
         self.view?.addGestureRecognizer(pinchGestureRecognizer)
         
+        //createTile(set: "Kinds", group: "lover group", rule: "lover rule", title: "Lover Wired")
+
     }
     
 
@@ -44,12 +46,13 @@ class BoardScene: SKScene {
         if tap.state != .ended {
             return
         }
+
         
-        if let tilemap = scene?.childNode(withName: "tileMapNode") as? SKTileMapNode {
+        if let tilemap = scene?.childNode(withName: kindBoardMechanics.sharedInstance.kindBoardName ) as? SKTileMapNode {
 
             //natural tapped Location: viewPoint
             //converted Location: scenePoint
-            // For the conversion to work it is important that the scene is centered at 0,5 / 0.5
+            // IMPORTANT: For the conversion to work it is important that the scene is centered at 0,5 / 0.5
             let viewPoint = tap.location(in: tap.view)
             let scenePoint = self.convertPoint(fromView: viewPoint)
             
@@ -57,17 +60,22 @@ class BoardScene: SKScene {
                 //print("found tile in location")
                 let col = tilemap.tileColumnIndex(fromPosition: scenePoint)
                 let row = tilemap.tileRowIndex(fromPosition: scenePoint)
-                 //print(" \(String(describing: tile?.name)) - col \(col) - row\(row)")
-               
-                // manipulate tile here.
-                tilemap.setTileGroup(nil, forColumn: col, row: row)
+ 
+                
+                // HOW TO CHANGE THE TILE WHEN CLICKED
+                //print("Clicked: col: \(col) :: row: \(row)")
+                //tilemap.setTileGroup(nil, forColumn: col, row: row)
+                
+                replaceTileAt(row: row, col: col, set: "Kinds", groupName: "lover group", rule: "lover rule", definition: "Lover Wired")
+                
+                // HOW TO READ WHICH TILE WAS CLICKED
+                print("Value is: \(retrieveTileDataWithKeyAt(row: row, col: col, forKey: "kind"))")
+                //let value = retrieveTileDataWithKeyAt(row: row, col: col, forKey: "kind")
             }
         }
     }
-    
 
-    
-    
+
 
     
     override func update(_ currentTime: TimeInterval) {

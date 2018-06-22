@@ -11,12 +11,50 @@ import SpriteKit
 
 extension BoardScene {
 
+ 
+    // ====================================================
+    // MANIPULATING TILE DATA
+    //
+    //====================================================
+    
+    func retrieveTileDataWithKeyAt(row: Int, col: Int, forKey: String) -> Any {
+        if let tilemap = scene?.childNode(withName: kindBoardMechanics.sharedInstance.kindBoardName) as? SKTileMapNode {
+            let tile = tilemap.tileDefinition(atColumn: col, row: row)
+            return (tile?.userData?.value(forKey: forKey) ?? "No value found")
+        }
+        return "No data found"
+    }
+    
+    
+    // ====================================================
+    // REPLACING TILE WITH OTHER TILE
+    //
+    //====================================================
+
+    func replaceTileAt(row: Int, col: Int, set: String, groupName: String, rule: String, definition: String) {
+        if let tilemap = scene?.childNode(withName: kindBoardMechanics.sharedInstance.kindBoardName) as? SKTileMapNode {
+            let tileSet = SKTileSet(named: set)
+            if let tileGroup = tileSet?.tileGroups.filter({ $0.name == groupName}).first {
+                if let tileRule = tileGroup.rules.filter({$0.name == rule}).first {
+                    if  let tileDefinition = tileRule.tileDefinitions.filter({$0.name == definition}).first {
+                        tilemap.setTileGroup(tileGroup, andTileDefinition: tileDefinition, forColumn: col, row: row)
+                    }
+                }
+            }
+        }
+    }
+    
+    // ====================================================
+    // USER GESTURES AND INTERACTIONS WITH THE BOARD
+    //
+    //====================================================
+    
     func returnPanLimit() -> CGFloat {
-      // (initCamScale - lastCamScale) * 380 + 420
-      //(0,34 - 0,60 )* 380 + 420
+        // (initCamScale - lastCamScale) * 380 + 420
+        //(0,34 - 0,60 )* 380 + 420
         
         return 420
-
+        
     }
     
     func keepWithinPanLimit(for coordinate: inout CGFloat) -> CGFloat
@@ -28,7 +66,7 @@ extension BoardScene {
         }
         return coordinate
     }
-
+    
     // EaseOut function added to action.timingFunction = CubicEaseOut in the Pan gesture handler
     func CubicEaseOut(_ t:Float)->Float
     {
@@ -108,4 +146,6 @@ extension BoardScene {
         }
         
     }
+    
 }
+
