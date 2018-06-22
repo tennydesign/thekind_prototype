@@ -31,7 +31,22 @@ extension BoardScene {
     //
     //====================================================
 
-    func replaceTileAt(row: Int, col: Int, set: String, groupName: String, rule: String, definition: String) {
+    func replaceTileAt(row: Int, col: Int, kind: Kind) {
+        if let tilemap = scene?.childNode(withName: kindBoardMechanics.sharedInstance.kindBoardName) as? SKTileMapNode {
+            // check type of object with a cast.
+            if let kind = kind as? Lover {
+                print("its a lover")
+                tilemap.setTileGroup(kind.group, andTileDefinition: kind.definition, forColumn: col, row: row)
+            } else if let kind = kind as? Rebel {
+                print("its a rebel")
+                tilemap.setTileGroup(kind.group, andTileDefinition: kind.definition, forColumn: col, row: row)
+            }
+         }
+    }
+    
+    // DEPRECATED
+    //
+    func replaceTileAtByName(row: Int, col: Int, set: String, groupName: String, rule: String, definition: String) {
         if let tilemap = scene?.childNode(withName: kindBoardMechanics.sharedInstance.kindBoardName) as? SKTileMapNode {
             let tileSet = SKTileSet(named: set)
             if let tileGroup = tileSet?.tileGroups.filter({ $0.name == groupName}).first {

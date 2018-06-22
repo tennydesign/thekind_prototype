@@ -19,11 +19,4 @@ class kindBoardMechanics {
     
 }
 
-//HERE
-class Kind:NSObject {
-    
-}
 
-class Lover:Kind {
-    
-}

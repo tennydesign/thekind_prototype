@@ -32,15 +32,10 @@ class BoardScene: SKScene {
         self.view?.addGestureRecognizer(tapGestureRecognizer)
         self.view?.addGestureRecognizer(pinchGestureRecognizer)
         
-        //createTile(set: "Kinds", group: "lover group", rule: "lover rule", title: "Lover Wired")
 
     }
     
 
-
-    
-
-    
     //This alows the user to tap the tile.
     @objc func handleTapFrom(withSender tap: UITapGestureRecognizer) {
         if tap.state != .ended {
@@ -63,10 +58,9 @@ class BoardScene: SKScene {
  
                 
                 // HOW TO CHANGE THE TILE WHEN CLICKED
-                //print("Clicked: col: \(col) :: row: \(row)")
-                //tilemap.setTileGroup(nil, forColumn: col, row: row)
-                
-                replaceTileAt(row: row, col: col, set: "Kinds", groupName: "lover group", rule: "lover rule", definition: "Lover Wired")
+                let lover: Lover = Lover()
+                let rebel: Rebel = Rebel()
+                replaceTileAt(row: row, col: col, kind: rebel)
                 
                 // HOW TO READ WHICH TILE WAS CLICKED
                 print("Value is: \(retrieveTileDataWithKeyAt(row: row, col: col, forKey: "kind"))")
