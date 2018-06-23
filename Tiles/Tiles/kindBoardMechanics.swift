@@ -14,9 +14,14 @@ class kindBoardMechanics {
     static let sharedInstance = kindBoardMechanics()
     init(){}
     let kindBoardName = "kindBoardTileMap"
-    let cameraName = "camera"
+    let cameraName = "camera" 
     
-    
+    enum tilePaths {
+        static var groups:[String:String]  = ["lover": "lover group",
+                                            "rebel": "rebel group"]
+        static var rules:[String:String] = ["lover":"lover rule",
+                                        "rebel":"rebel rule"]
+    }
 }
 
 

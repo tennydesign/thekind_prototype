@@ -59,11 +59,11 @@ class BoardScene: SKScene {
                 
                 // HOW TO CHANGE THE TILE WHEN CLICKED
                 let lover: Lover = Lover(kindType: .wired)
-                let rebel: Rebel = Rebel(kindType: .wired)
+                let rebel: Rebel = Rebel(kindType: .social)
                 
  //               lover.kindType = .wired
                 
-                replaceTileAt(row: row, col: col, kind: rebel)
+                replaceTileAt(row: row, col: col, kind: lover)
                 
                 // HOW TO READ WHICH TILE WAS CLICKED
                 print("Value is: \(retrieveTileDataWithKeyAt(row: row, col: col, forKey: "kind"))")

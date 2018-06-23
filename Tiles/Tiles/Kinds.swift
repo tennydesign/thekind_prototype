@@ -9,34 +9,45 @@
 import Foundation
 import SpriteKit
 
+fileprivate let kindTileCollectionPath: String = "Kinds"
+
 class Kind:NSObject {
     var tileSet:SKTileSet!
     var group: SKTileGroup!
     var rule: SKTileGroupRule!
     var definition: SKTileDefinition!
     var kindType: KindTypeEnum!
+    var groupPath:String!
+    var rulePath:String!
+    lazy var kindName = String()
     
     enum KindTypeEnum:String {
         case wired,social
     }
     
     init(kindType: KindTypeEnum) {
-        tileSet = SKTileSet(named: "Kinds")!
+        super.init()
+        tileSet = SKTileSet(named: kindTileCollectionPath)!
+        self.kindType = kindType
+    }
+    
+    func loadTileInMap(){
+        groupPath = kindBoardMechanics.tilePaths.groups[kindName]!
+        rulePath = kindBoardMechanics.tilePaths.rules[kindName]!
+        group = tileSet?.tileGroups.filter({$0.name == groupPath}).first
+        rule = group.rules.filter({ $0.name == rulePath}).first
+        definition = rule.tileDefinitions.filter({$0.name == kindType.rawValue}).first
     }
     
 
 }
 
-//HERE: Refacrtoring and cleaning those exposed strings
 class Lover:Kind {
-    
+
     override init(kindType: KindTypeEnum) {
         super.init(kindType: kindType)
-        self.kindType = kindType
-        self.group = tileSet?.tileGroups.filter({ $0.name == "lover group"}).first
-        self.rule = group.rules.filter({ $0.name == "lover rule" }).first
-        self.definition = rule.tileDefinitions.filter({$0.name == kindType.rawValue}).first
-        
+        self.kindName = "lover"
+        loadTileInMap()
     }
     
 
@@ -46,11 +57,9 @@ class Rebel:Kind {
     
     override init(kindType: KindTypeEnum) {
         super.init(kindType: kindType)
-        self.kindType = kindType
-        self.group = tileSet?.tileGroups.filter({ $0.name == "rebel group"}).first
-        self.rule = group.rules.filter({ $0.name == "rebel rule" }).first
-        self.definition = rule.tileDefinitions.filter({$0.name == kindType.rawValue}).first
-        
+        self.kindName = "rebel"
+        loadTileInMap()
     }
+
     
 }
