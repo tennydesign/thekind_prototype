@@ -9,9 +9,11 @@
 import Foundation
 import SpriteKit
 
+
 class kindBoardMechanics {
 
     static let sharedInstance = kindBoardMechanics()
+    
     init(){}
     let kindBoardName = "kindBoardTileMap"
     let cameraName = "camera" 
@@ -22,6 +24,7 @@ class kindBoardMechanics {
         static var rules:[String:String] = ["lover":"lover rule",
                                         "rebel":"rebel rule"]
     }
+    
 }
 
 

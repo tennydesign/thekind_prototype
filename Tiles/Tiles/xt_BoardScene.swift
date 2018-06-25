@@ -32,6 +32,7 @@ extension BoardScene {
     //====================================================
 
     func replaceTileAt(row: Int, col: Int, kind: Kind) {
+        
         if let tilemap = scene?.childNode(withName: kindBoardMechanics.sharedInstance.kindBoardName) as? SKTileMapNode {
             // check type of object with a cast.
             if let kind = kind as? Lover {
@@ -46,18 +47,18 @@ extension BoardScene {
     
     // DEPRECATED
     //
-    func replaceTileAtByName(row: Int, col: Int, set: String, groupName: String, rule: String, definition: String) {
-        if let tilemap = scene?.childNode(withName: kindBoardMechanics.sharedInstance.kindBoardName) as? SKTileMapNode {
-            let tileSet = SKTileSet(named: set)
-            if let tileGroup = tileSet?.tileGroups.filter({ $0.name == groupName}).first {
-                if let tileRule = tileGroup.rules.filter({$0.name == rule}).first {
-                    if  let tileDefinition = tileRule.tileDefinitions.filter({$0.name == definition}).first {
-                        tilemap.setTileGroup(tileGroup, andTileDefinition: tileDefinition, forColumn: col, row: row)
-                    }
-                }
-            }
-        }
-    }
+//    func replaceTileAtByName(row: Int, col: Int, set: String, groupName: String, rule: String, definition: String) {
+//        if let tilemap = scene?.childNode(withName: kindBoardMechanics.sharedInstance.kindBoardName) as? SKTileMapNode {
+//            let tileSet = SKTileSet(named: set)
+//            if let tileGroup = tileSet?.tileGroups.filter({ $0.name == groupName}).first {
+//                if let tileRule = tileGroup.rules.filter({$0.name == rule}).first {
+//                    if  let tileDefinition = tileRule.tileDefinitions.filter({$0.name == definition}).first {
+//                        tilemap.setTileGroup(tileGroup, andTileDefinition: tileDefinition, forColumn: col, row: row)
+//                    }
+//                }
+//            }
+//        }
+//    }
     
     // ====================================================
     // USER GESTURES AND INTERACTIONS WITH THE BOARD

@@ -9,6 +9,7 @@
 import Foundation
 import SpriteKit
 
+
 fileprivate let kindTileCollectionPath: String = "Kinds"
 
 class Kind:NSObject {
@@ -31,7 +32,8 @@ class Kind:NSObject {
         self.kindType = kindType
     }
     
-    func loadTileInMap(){
+    //HERE: Turn this into a delegate?
+    func loadTilePaths(){
         groupPath = kindBoardMechanics.tilePaths.groups[kindName]!
         rulePath = kindBoardMechanics.tilePaths.rules[kindName]!
         group = tileSet?.tileGroups.filter({$0.name == groupPath}).first
@@ -39,27 +41,22 @@ class Kind:NSObject {
         definition = rule.tileDefinitions.filter({$0.name == kindType.rawValue}).first
     }
     
+    
 
 }
 
 class Lover:Kind {
-
     override init(kindType: KindTypeEnum) {
         super.init(kindType: kindType)
         self.kindName = "lover"
-        loadTileInMap()
+        loadTilePaths()
     }
-    
-
 }
 
 class Rebel:Kind {
-    
     override init(kindType: KindTypeEnum) {
         super.init(kindType: kindType)
         self.kindName = "rebel"
-        loadTileInMap()
+        loadTilePaths()
     }
-
-    
 }

@@ -56,7 +56,7 @@ class BoardScene: SKScene {
                 let col = tilemap.tileColumnIndex(fromPosition: scenePoint)
                 let row = tilemap.tileRowIndex(fromPosition: scenePoint)
  
-                
+                let centerOfTile = tilemap.centerOfTile(atColumn: col, row: row)
                 // HOW TO CHANGE THE TILE WHEN CLICKED
                 let lover: Lover = Lover(kindType: .wired)
                 let rebel: Rebel = Rebel(kindType: .social)
@@ -64,6 +64,20 @@ class BoardScene: SKScene {
  //               lover.kindType = .wired
                 
                 replaceTileAt(row: row, col: col, kind: lover)
+                
+                if let magic = SKEmitterNode(fileNamed: "Portal.sks") {
+                    
+                    magic.position = centerOfTile
+                    magic.name = "magic"
+                    tilemap.addChild(magic)
+                    let wait: SKAction = SKAction.wait(forDuration: 0.5)
+                    let fadeIn: SKAction = SKAction.fadeIn(withDuration: 0.2)
+                    let animationDuration: SKAction = SKAction.wait(forDuration: 2)
+                    let fadeOut: SKAction = SKAction.fadeOut(withDuration: 1)
+                    //let remove: SKAction = SKAction.removeFromParent()
+                    let seq: SKAction = SKAction.sequence([wait,fadeIn,animationDuration,fadeOut])
+                    magic.run(seq)
+                }
                 
                 // HOW TO READ WHICH TILE WAS CLICKED
                 print("Value is: \(retrieveTileDataWithKeyAt(row: row, col: col, forKey: "kind"))")

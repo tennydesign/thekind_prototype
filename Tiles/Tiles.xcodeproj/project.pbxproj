@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A00024C120D2022D00A43FFB /* BoardScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00024C020D2022D00A43FFB /* BoardScene.swift */; };
+		A09D641D20E069C9006F638E /* Magic.sks in Resources */ = {isa = PBXBuildFile; fileRef = A09D641C20E069C9006F638E /* Magic.sks */; };
+		A09D641F20E06A67006F638E /* Bokeh.sks in Resources */ = {isa = PBXBuildFile; fileRef = A09D641E20E06A67006F638E /* Bokeh.sks */; };
+		A09D642120E06AFE006F638E /* Portal.sks in Resources */ = {isa = PBXBuildFile; fileRef = A09D642020E06AFE006F638E /* Portal.sks */; };
 		A0D4F82820CF3BD1001AFFF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D4F82720CF3BD1001AFFF8 /* AppDelegate.swift */; };
 		A0D4F82A20CF3BD1001AFFF8 /* spriteKitTIleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D4F82920CF3BD1001AFFF8 /* spriteKitTIleController.swift */; };
 		A0D4F82D20CF3BD1001AFFF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0D4F82B20CF3BD1001AFFF8 /* Main.storyboard */; };
@@ -43,6 +46,9 @@
 
 /* Begin PBXFileReference section */
 		A00024C020D2022D00A43FFB /* BoardScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScene.swift; sourceTree = "<group>"; };
+		A09D641C20E069C9006F638E /* Magic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Magic.sks; sourceTree = "<group>"; };
+		A09D641E20E06A67006F638E /* Bokeh.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Bokeh.sks; sourceTree = "<group>"; };
+		A09D642020E06AFE006F638E /* Portal.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Portal.sks; sourceTree = "<group>"; };
 		A0D4F82420CF3BD1001AFFF8 /* Tiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D4F82720CF3BD1001AFFF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0D4F82920CF3BD1001AFFF8 /* spriteKitTIleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spriteKitTIleController.swift; sourceTree = "<group>"; };
@@ -118,6 +124,9 @@
 				A0D4F82B20CF3BD1001AFFF8 /* Main.storyboard */,
 				A00024C020D2022D00A43FFB /* BoardScene.swift */,
 				A0F2839C20DB28A000AF4394 /* xt_BoardScene.swift */,
+				A09D641C20E069C9006F638E /* Magic.sks */,
+				A09D641E20E06A67006F638E /* Bokeh.sks */,
+				A09D642020E06AFE006F638E /* Portal.sks */,
 				A0F283A020DC71E000AF4394 /* kindBoardMechanics.swift */,
 				A0F283A220DC9F1500AF4394 /* Kinds.swift */,
 				A0D4F85820CF3E33001AFFF8 /* BoardScene.sks */,
@@ -253,9 +262,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A09D642120E06AFE006F638E /* Portal.sks in Resources */,
 				A0D4F83520CF3BD2001AFFF8 /* LaunchScreen.storyboard in Resources */,
+				A09D641F20E06A67006F638E /* Bokeh.sks in Resources */,
 				A0D4F83220CF3BD2001AFFF8 /* Assets.xcassets in Resources */,
 				A0D4F82D20CF3BD1001AFFF8 /* Main.storyboard in Resources */,
+				A09D641D20E069C9006F638E /* Magic.sks in Resources */,
 				A0D4F85920CF3E33001AFFF8 /* BoardScene.sks in Resources */,
 				A0F2839F20DB4A6D00AF4394 /* gameBoard.sks in Resources */,
 				A0DA6A7A20D73ECB00B40BAD /* Kinds.sks in Resources */,
