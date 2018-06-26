@@ -36,15 +36,15 @@ extension JourneyViewController: KolodaViewDelegate {
     }
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-        UIApplication.shared.openURL(URL(string: "https://yalantis.com/")!)
-
+ 
     }
     
 }
 
 extension JourneyViewController: KolodaViewDataSource {
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        return UIImageView(image: images[index])
+        let customView = Bundle.main.loadNibNamed("View", owner: nil, options: nil)?.first as? CardView
+        return customView! //UIImageView(image: images[index])
     }
     
     func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {

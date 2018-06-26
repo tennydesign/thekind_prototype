@@ -15,6 +15,10 @@
 		A09D642A20E1B73F006F638E /* MyKolodaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D642920E1B73F006F638E /* MyKolodaViewController.swift */; };
 		A09D642C20E1E19C006F638E /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A09D642B20E1E19C006F638E /* OverlayView.xib */; };
 		A09D642E20E1E30C006F638E /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D642D20E1E30C006F638E /* CustomOverlayView.swift */; };
+		A09D643020E1F1D1006F638E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D642F20E1F1D1006F638E /* CardView.swift */; };
+		A09D643220E1F1E1006F638E /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = A09D643120E1F1E1006F638E /* View.xib */; };
+		A09D643420E1F2E5006F638E /* MyScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A09D643320E1F2E5006F638E /* MyScene.sks */; };
+		A09D643620E1F3A3006F638E /* MyScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D643520E1F3A3006F638E /* MyScene.swift */; };
 		A0D4F82820CF3BD1001AFFF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D4F82720CF3BD1001AFFF8 /* AppDelegate.swift */; };
 		A0D4F82A20CF3BD1001AFFF8 /* spriteKitTIleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D4F82920CF3BD1001AFFF8 /* spriteKitTIleController.swift */; };
 		A0D4F82D20CF3BD1001AFFF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0D4F82B20CF3BD1001AFFF8 /* Main.storyboard */; };
@@ -59,6 +63,10 @@
 		A09D642920E1B73F006F638E /* MyKolodaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKolodaViewController.swift; sourceTree = "<group>"; };
 		A09D642B20E1E19C006F638E /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 		A09D642D20E1E30C006F638E /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
+		A09D642F20E1F1D1006F638E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		A09D643120E1F1E1006F638E /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		A09D643320E1F2E5006F638E /* MyScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyScene.sks; sourceTree = "<group>"; };
+		A09D643520E1F3A3006F638E /* MyScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScene.swift; sourceTree = "<group>"; };
 		A0D4F82420CF3BD1001AFFF8 /* Tiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D4F82720CF3BD1001AFFF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0D4F82920CF3BD1001AFFF8 /* spriteKitTIleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spriteKitTIleController.swift; sourceTree = "<group>"; };
@@ -146,6 +154,10 @@
 			children = (
 				A09D642920E1B73F006F638E /* MyKolodaViewController.swift */,
 				A09D642B20E1E19C006F638E /* OverlayView.xib */,
+				A09D642F20E1F1D1006F638E /* CardView.swift */,
+				A09D643520E1F3A3006F638E /* MyScene.swift */,
+				A09D643320E1F2E5006F638E /* MyScene.sks */,
+				A09D643120E1F1E1006F638E /* View.xib */,
 				A09D642D20E1E30C006F638E /* CustomOverlayView.swift */,
 			);
 			path = Journey;
@@ -321,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A09D643220E1F1E1006F638E /* View.xib in Resources */,
 				A09D642120E06AFE006F638E /* Portal.sks in Resources */,
 				A0D4F83520CF3BD2001AFFF8 /* LaunchScreen.storyboard in Resources */,
 				A09D641F20E06A67006F638E /* Bokeh.sks in Resources */,
@@ -330,6 +343,7 @@
 				A0D4F85920CF3E33001AFFF8 /* BoardScene.sks in Resources */,
 				A09D642C20E1E19C006F638E /* OverlayView.xib in Resources */,
 				A0F2839F20DB4A6D00AF4394 /* gameBoard.sks in Resources */,
+				A09D643420E1F2E5006F638E /* MyScene.sks in Resources */,
 				A0DA6A7A20D73ECB00B40BAD /* Kinds.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,9 +411,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0D4F82A20CF3BD1001AFFF8 /* spriteKitTIleController.swift in Sources */,
+				A09D643620E1F3A3006F638E /* MyScene.swift in Sources */,
 				A00024C120D2022D00A43FFB /* BoardScene.swift in Sources */,
 				A09D642E20E1E30C006F638E /* CustomOverlayView.swift in Sources */,
 				A0D4F82820CF3BD1001AFFF8 /* AppDelegate.swift in Sources */,
+				A09D643020E1F1D1006F638E /* CardView.swift in Sources */,
 				A0F283A120DC71E000AF4394 /* kindBoardMechanics.swift in Sources */,
 				A0F283A320DC9F1500AF4394 /* Kinds.swift in Sources */,
 				A09D642A20E1B73F006F638E /* MyKolodaViewController.swift in Sources */,
