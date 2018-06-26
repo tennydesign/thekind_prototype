@@ -67,9 +67,24 @@
                     <view key="view" contentMode="scaleToFill" id="27P-u1-Ra3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zaw-Ix-z3L" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="26" y="53" width="333" height="355"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wM4-ai-qOR" firstAttribute="trailing" secondItem="zaw-Ix-z3L" secondAttribute="trailing" constant="16" id="5Lc-GV-G1Q"/>
+                            <constraint firstItem="zaw-Ix-z3L" firstAttribute="leading" secondItem="wM4-ai-qOR" secondAttribute="leading" constant="26" id="5r1-Yw-TBq"/>
+                            <constraint firstItem="wM4-ai-qOR" firstAttribute="bottom" secondItem="zaw-Ix-z3L" secondAttribute="bottom" constant="259" id="9nQ-pe-ItW"/>
+                            <constraint firstItem="zaw-Ix-z3L" firstAttribute="top" secondItem="wM4-ai-qOR" secondAttribute="top" constant="33" id="hBA-cf-Ncc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wM4-ai-qOR"/>
                     </view>
+                    <connections>
+                        <outlet property="kolodaView" destination="zaw-Ix-z3L" id="ecA-3q-gfG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zI-GI-zMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
