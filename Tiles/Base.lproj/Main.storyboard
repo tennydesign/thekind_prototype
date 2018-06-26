@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ihr-4f-aB8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -59,6 +59,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-530.39999999999998" y="73.313343328335833"/>
+        </scene>
+        <!--Journey View Controller-->
+        <scene sceneID="f4C-u3-jfq">
+            <objects>
+                <viewController id="Ihr-4f-aB8" customClass="JourneyViewController" customModule="Tiles" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="27P-u1-Ra3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="izz-Kb-fEE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </skView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="izz-Kb-fEE" firstAttribute="leading" secondItem="wM4-ai-qOR" secondAttribute="leading" id="9fQ-NR-38x"/>
+                            <constraint firstItem="izz-Kb-fEE" firstAttribute="bottom" secondItem="wM4-ai-qOR" secondAttribute="bottom" id="GyE-lS-JYO"/>
+                            <constraint firstItem="izz-Kb-fEE" firstAttribute="top" secondItem="27P-u1-Ra3" secondAttribute="top" id="NkW-5w-Os4"/>
+                            <constraint firstItem="izz-Kb-fEE" firstAttribute="trailing" secondItem="wM4-ai-qOR" secondAttribute="trailing" id="XNR-rj-8mK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wM4-ai-qOR"/>
+                    </view>
+                    <connections>
+                        <outlet property="journeySkView" destination="izz-Kb-fEE" id="6A5-zR-9C3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4zI-GI-zMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359.19999999999999" y="73.313343328335833"/>
         </scene>
     </scenes>
     <resources>
