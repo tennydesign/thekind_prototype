@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54D9C261221B4BF7F2D65517 /* Pods_Tiles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D69BA701A2F49F883A46F5 /* Pods_Tiles.framework */; };
 		A00024C120D2022D00A43FFB /* BoardScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00024C020D2022D00A43FFB /* BoardScene.swift */; };
 		A09D641D20E069C9006F638E /* Magic.sks in Resources */ = {isa = PBXBuildFile; fileRef = A09D641C20E069C9006F638E /* Magic.sks */; };
 		A09D641F20E06A67006F638E /* Bokeh.sks in Resources */ = {isa = PBXBuildFile; fileRef = A09D641E20E06A67006F638E /* Bokeh.sks */; };
 		A09D642120E06AFE006F638E /* Portal.sks in Resources */ = {isa = PBXBuildFile; fileRef = A09D642020E06AFE006F638E /* Portal.sks */; };
-		A09D642620E1B6CE006F638E /* JourneyScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A09D642520E1B6CE006F638E /* JourneyScene.sks */; };
-		A09D642820E1B6E6006F638E /* JourneyScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D642720E1B6E6006F638E /* JourneyScene.swift */; };
 		A09D642A20E1B73F006F638E /* JourneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D642920E1B73F006F638E /* JourneyViewController.swift */; };
 		A0D4F82820CF3BD1001AFFF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D4F82720CF3BD1001AFFF8 /* AppDelegate.swift */; };
 		A0D4F82A20CF3BD1001AFFF8 /* spriteKitTIleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D4F82920CF3BD1001AFFF8 /* spriteKitTIleController.swift */; };
@@ -48,12 +47,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		80714C1C44789367331D13D3 /* Pods-Tiles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiles.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tiles/Pods-Tiles.debug.xcconfig"; sourceTree = "<group>"; };
+		84DB71BB94FD24E0AFFE10D0 /* Pods-Tiles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiles.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tiles/Pods-Tiles.release.xcconfig"; sourceTree = "<group>"; };
+		95D69BA701A2F49F883A46F5 /* Pods_Tiles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tiles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A00024C020D2022D00A43FFB /* BoardScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScene.swift; sourceTree = "<group>"; };
 		A09D641C20E069C9006F638E /* Magic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Magic.sks; sourceTree = "<group>"; };
 		A09D641E20E06A67006F638E /* Bokeh.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Bokeh.sks; sourceTree = "<group>"; };
 		A09D642020E06AFE006F638E /* Portal.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Portal.sks; sourceTree = "<group>"; };
-		A09D642520E1B6CE006F638E /* JourneyScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = JourneyScene.sks; sourceTree = "<group>"; };
-		A09D642720E1B6E6006F638E /* JourneyScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyScene.swift; sourceTree = "<group>"; };
 		A09D642920E1B73F006F638E /* JourneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyViewController.swift; sourceTree = "<group>"; };
 		A0D4F82420CF3BD1001AFFF8 /* Tiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D4F82720CF3BD1001AFFF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54D9C261221B4BF7F2D65517 /* Pods_Tiles.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +103,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0497795EFF35036B8B56517B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				80714C1C44789367331D13D3 /* Pods-Tiles.debug.xcconfig */,
+				84DB71BB94FD24E0AFFE10D0 /* Pods-Tiles.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4112A25BBFE9B3DDF26A6329 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95D69BA701A2F49F883A46F5 /* Pods_Tiles.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A09D642220E1B59B006F638E /* Effects */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,8 +140,6 @@
 		A09D642420E1B651006F638E /* Journey */ = {
 			isa = PBXGroup;
 			children = (
-				A09D642520E1B6CE006F638E /* JourneyScene.sks */,
-				A09D642720E1B6E6006F638E /* JourneyScene.swift */,
 				A09D642920E1B73F006F638E /* JourneyViewController.swift */,
 			);
 			path = Journey;
@@ -139,6 +155,8 @@
 				A0D4F84920CF3BD2001AFFF8 /* TilesUITests */,
 				A0D4F83E20CF3BD2001AFFF8 /* TilesTests */,
 				A09D642320E1B5B7006F638E /* GameBoard */,
+				0497795EFF35036B8B56517B /* Pods */,
+				4112A25BBFE9B3DDF26A6329 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,9 +216,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0D4F84F20CF3BD2001AFFF8 /* Build configuration list for PBXNativeTarget "Tiles" */;
 			buildPhases = (
+				59BD26DCE8BAB301B95EEB40 /* [CP] Check Pods Manifest.lock */,
 				A0D4F82020CF3BD1001AFFF8 /* Sources */,
 				A0D4F82120CF3BD1001AFFF8 /* Frameworks */,
 				A0D4F82220CF3BD1001AFFF8 /* Resources */,
+				17ACF7F741BC92E24120C424 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -301,7 +321,6 @@
 				A0D4F83220CF3BD2001AFFF8 /* Assets.xcassets in Resources */,
 				A0D4F82D20CF3BD1001AFFF8 /* Main.storyboard in Resources */,
 				A09D641D20E069C9006F638E /* Magic.sks in Resources */,
-				A09D642620E1B6CE006F638E /* JourneyScene.sks in Resources */,
 				A0D4F85920CF3E33001AFFF8 /* BoardScene.sks in Resources */,
 				A0F2839F20DB4A6D00AF4394 /* gameBoard.sks in Resources */,
 				A0DA6A7A20D73ECB00B40BAD /* Kinds.sks in Resources */,
@@ -324,6 +343,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		17ACF7F741BC92E24120C424 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Tiles/Pods-Tiles-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tiles/Pods-Tiles-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59BD26DCE8BAB301B95EEB40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tiles-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A0D4F82020CF3BD1001AFFF8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -337,7 +397,6 @@
 				A09D642A20E1B73F006F638E /* JourneyViewController.swift in Sources */,
 				A0F2839D20DB28A000AF4394 /* xt_BoardScene.swift in Sources */,
 				A0D4F83020CF3BD1001AFFF8 /* Tiles.xcdatamodeld in Sources */,
-				A09D642820E1B6E6006F638E /* JourneyScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +567,7 @@
 		};
 		A0D4F85020CF3BD2001AFFF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80714C1C44789367331D13D3 /* Pods-Tiles.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -526,6 +586,7 @@
 		};
 		A0D4F85120CF3BD2001AFFF8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84DB71BB94FD24E0AFFE10D0 /* Pods-Tiles.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
