@@ -111,7 +111,7 @@ extension JourneyViewController: KolodaViewDataSource {
     }
     
     func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
-        return .fast
+        return .moderate
     }
     
     // Creates an overlay in the card. Look for CustomOverlayView.swift for customization
