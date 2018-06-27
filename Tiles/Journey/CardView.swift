@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 class CardView: UIView {
     @IBOutlet var cardSKView: SKView!
-    let namesArray: [String] = ["Tenny", "Tais", "Foca", "Renata", "Gabriela"]
+    var namesArray: [String] = ["Tenny", "Tais", "Foca", "Renata", "Gabriela"]
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -22,7 +22,8 @@ class CardView: UIView {
     }
     
     func commonInit() {
-        delayWithSeconds(1) {
+        self.backgroundColor = UIColor.blue
+        delayWithSeconds(0.3) {
         if let scene = SKScene(fileNamed: "MyScene") as? MyScene {
             scene.scaleMode = .aspectFill
             scene.labelName = self.namesArray[Int(arc4random_uniform(4))]

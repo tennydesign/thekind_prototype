@@ -16,13 +16,13 @@ class CustomOverlayView: OverlayView {
 
     @IBOutlet lazy var overlayImageView: UIImageView! = {
         [unowned self] in
-        
+
         var imageView = UIImageView(frame: self.bounds)
         self.addSubview(imageView)
-        
+
         return imageView
         }()
-    
+
     override var overlayState: SwipeResultDirection?  {
         didSet {
             switch overlayState {
@@ -33,7 +33,7 @@ class CustomOverlayView: OverlayView {
             default:
                 overlayImageView.image = nil
             }
-            
+
         }
     }
 
