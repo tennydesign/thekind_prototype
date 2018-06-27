@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ihr-4f-aB8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VFm-lJ-ztJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="9V9-hl-cUh">
+            <objects>
+                <tabBarController id="VFm-lJ-ztJ" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Oh7-jT-6lr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="oOX-94-QlW"/>
+                        <segue destination="Ihr-4f-aB8" kind="relationship" relationship="viewControllers" id="1ut-9b-V9E"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wJl-gx-UXg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26" y="-793"/>
+        </scene>
+        <!--Tiles-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tiles" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,9 +43,9 @@
                                 </constraints>
                             </skView>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="basetransparent" translatesAutoresizingMaskIntoConstraints="NO" id="Lnc-73-qjn">
-                                <rect key="frame" x="0.0" y="302" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="253" width="375" height="268"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="TjN-io-z8J"/>
+                                    <constraint firstAttribute="height" constant="268" id="TjN-io-z8J"/>
                                     <constraint firstAttribute="width" constant="375" id="qIY-iU-aHT"/>
                                 </constraints>
                             </imageView>
@@ -48,10 +66,13 @@
                             <constraint firstItem="oFn-bM-p9f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="ldp-F0-hUY"/>
                             <constraint firstItem="Lnc-73-qjn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ndM-c6-DPb"/>
                             <constraint firstItem="Lnc-73-qjn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qIW-pX-prV"/>
-                            <constraint firstItem="Lnc-73-qjn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-165" id="vUJ-1j-N35"/>
+                            <constraint firstItem="Lnc-73-qjn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-97" id="vUJ-1j-N35"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Tiles" image="tilesIcon" selectedImage="tilesIcon" id="wyK-Bq-qDn">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="boardSkView" destination="oFn-bM-p9f" id="MdC-wW-hiR"/>
                     </connections>
@@ -60,7 +81,7 @@
             </objects>
             <point key="canvasLocation" x="-530.39999999999998" y="73.313343328335833"/>
         </scene>
-        <!--Journey View Controller-->
+        <!--Cards-->
         <scene sceneID="f4C-u3-jfq">
             <objects>
                 <viewController id="Ihr-4f-aB8" customClass="JourneyViewController" customModule="Tiles" customModuleProvider="target" sceneMemberID="viewController">
@@ -69,7 +90,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCH-j6-Vsj">
-                                <rect key="frame" x="46" y="586" width="55" height="59"/>
+                                <rect key="frame" x="46" y="537" width="55" height="59"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="5oj-cS-7gD"/>
@@ -83,7 +104,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZN-Bf-l61">
-                                <rect key="frame" x="282" y="582" width="68" height="73"/>
+                                <rect key="frame" x="282" y="533" width="68" height="73"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="73" id="6r5-3V-t0o"/>
@@ -97,7 +118,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNk-1R-Ypm">
-                                <rect key="frame" x="129" y="598" width="126" height="35"/>
+                                <rect key="frame" x="129" y="549" width="126" height="35"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="undo">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
@@ -107,7 +128,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="zaw-Ix-z3L" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="26" y="94" width="333" height="323"/>
+                                <rect key="frame" x="26" y="94" width="333" height="274"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -128,6 +149,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wM4-ai-qOR"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Cards" image="cards_icon" selectedImage="cards_icon" id="54o-KY-86c"/>
                     <connections>
                         <outlet property="kolodaView" destination="zaw-Ix-z3L" id="ecA-3q-gfG"/>
                     </connections>
@@ -139,8 +161,10 @@
     </scenes>
     <resources>
         <image name="basetransparent" width="485" height="169"/>
+        <image name="cards_icon" width="26" height="25"/>
         <image name="down right" width="1200" height="1200"/>
         <image name="left" width="1200" height="1200"/>
+        <image name="tilesIcon" width="16" height="16"/>
         <image name="toptransparent" width="485" height="169"/>
     </resources>
 </document>
